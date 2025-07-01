@@ -1,12 +1,12 @@
-Page in https://vlaattacker.github.io/
+Page in https://eazy.github.io/
 
 If you find our work useful, please cite:
 ```
-@article{wang2024exploring,
-         title={Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics},
-         author={Taowen Wang and Dongfang Liu and James Chenhao Liang and Wenhao Yang and Qifan Wang and Cheng Han and Jiebo Luo and Ruixiang Tang},
-         journal = {arXiv preprint arXiv:2411.13587},
-         year={2024}
+@article{che2025eazy,
+  title={Eazy: Eliminating hallucinations in lvlms by zeroing out hallucinatory image tokens},
+  author={Che, Liwei and Liu, Tony Qingze and Jia, Jing and Qin, Weiyi and Tang, Ruixiang and Pavlovic, Vladimir},
+  journal={arXiv preprint arXiv:2503.07772},
+  year={2025}
 }
 ```
 
