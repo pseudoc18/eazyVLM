@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics">
-  <meta name="keywords" content="Adversarial Attack Vision-Language-Action Robotics">
+        content="Hallucinatory Image Tokens: A Training-free EAZY Approach on Detecting and Mitigating Object Hallucinations in LVLMs">
+  <meta name="keywords" content="Hallucination Detection and Mitigation in LVLMs">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics</title>
+  <title>Hallucinatory Image Tokens: A Training-free EAZY Approach on Detecting and Mitigating Object Hallucinations in LVLMs</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -48,46 +48,34 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics</h1>
+          <h1 class="title is-1 publication-title">Hallucinatory Image Tokens: A Training-free EAZY Approach on Detecting and Mitigating Object Hallucinations in LVLMs</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="#">Taowen Wang</a><sup>1</sup>,</span>
+              <a href="#">Liwei Che</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://dongfang-liu.github.io/">Dongfang Liu</a><sup>1</sup>,</span>
+              <a href="#">Tony Qingze Liu</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://jamesliang819.github.io/">James Chenhao Liang</a><sup>1,2</sup>,</span>
+              <a href="#">Jing Jia</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="#">Wenhao Yang</a><sup>3</sup>,
+              <a href="#">Weiyi Qin</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://wqfcr.github.io/">Qifan Wang</a><sup>4</sup>,
+              <a href="https://www.ruixiangtang.net/">Ruixiang Tang</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://chenghan111.github.io/">Chen Han</a><sup>5</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a><sup>6</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.ruixiangtang.net/">Ruixiang Tang</a><sup>7</sup>
+              <a href="https://chenghan111.github.io/">Vladimir Pavlovic</a><sup>1</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Rochester Institute of Technology,</span>
-            <span class="author-block"><sup>2</sup>U.S. Naval Research Laboratory,</span>
-            <span class="author-block"><sup>3</sup>Lamar University,</span>
-            <span class="author-block"><sup>4</sup>Meta AI,</span>
-            <span class="author-block"><sup>5</sup>University of Missouri- Kansas City,</span>
-            <span class="author-block"><sup>6</sup>University of Rochester,</span>
-            <span class="author-block"><sup>7</sup>Rutgers University</span>
+            <span class="author-block"><sup>1</sup>Rutgers University</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2411.13587"
+                <a href="https://arxiv.org/pdf/2503.07772"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -96,7 +84,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2411.13587"
+                <a href="https://arxiv.org/pdf/2503.07772"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -105,7 +93,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/William-wAng618/roboticAttack"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -160,10 +148,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-                        Recently in robotics, Vision-Language-Action (VLA) models have emerged as a transformative approach, enabling robots to execute complex tasks by integrating visual and linguistic inputs within an end-to-end learning framework. While VLA models offer significant capabilities, they also introduce new attack surfaces, making them vulnerable to adversarial attacks. With these vulnerabilities largely unexplored, this paper systematically quantifies the robustness of VLA-based robotic systems. Recognizing the unique demands of robotic execution,
-            our attack objectives target the inherent spatial and functional characteristics of robotic systems.
-            In particular, we introduce an untargeted position-aware attack objective that leverages spatial foundations to destabilize robotic actions, and a targeted attack objective that manipulates the robotic trajectory. Additionally, we design an adversarial patch generation approach that places a small, colorful patch within the camera's view, effectively executing the attack in both digital and physical environments.
-            Our evaluation reveals a marked degradation in task success rates, with up to a 100\% reduction across a suite of simulated robotic tasks, highlighting critical security gaps in current VLA architectures. By unveiling these vulnerabilities and proposing actionable evaluation metrics, this work advances both the understanding and enhancement of safety for VLA-based robotic systems, underscoring the necessity for developing robust defense strategies prior to physical-world deployments.
+            Despite their remarkable potential, Large Vision-Language Models (LVLMs) still face challenges with object hallucination, a problem where their generated outputs mistakenly incorporate objects that do not actually exist. Although most works focus on addressing this issue within the language-model backbone, our work shifts the focus to the image input source, investigating how specific image tokens contribute to hallucinations. Our analysis reveals a striking finding: a small subset of image tokens with high attention scores are the primary drivers of object hallucination. By removing these hallucinatory image tokens (only 1.5% of all image tokens), the issue can be effectively mitigated. This finding holds consistently across different models and datasets. Building on this insight, we introduce EAZY, a novel, training-free method that automatically identifies and Eliminates hAllucinations by Zeroing out hallucinatorY image tokens. We utilize EAZY for unsupervised object hallucination detection, achieving 15% improvement compared to previous methods. Additionally, EAZY demonstrates remarkable effectiveness in mitigating hallucinations while preserving model utility and seamlessly adapting to various LVLM architectures.
           </p>
         </div>
       </div>
@@ -172,7 +157,7 @@
     <!-- Main Image -->
     <div class="columns is-centered has-text-centered" style="margin-top: 40px;">
       <div class="column" style="width: 100%; text-align: center;">
-        <img src="./static/images/main.png"
+        <img src="./static/images/zero_out.pdf"
              alt="Main Figure"
              style="width: 400%; height: auto;">
       </div>
@@ -182,251 +167,84 @@
     <div class="columns is-centered has-text-centered" style="margin-top: -20px;">
       <div class="column is-full" style="max-width: 100%; padding: 0 10%;">
         <p style="text-align: justify; font-size: 1rem; line-height: 1.5; margin: 0;">
-          The robot captures an input image, processes it through a vision-language model to generate tokens representing actions, and then uses an action de-tokenizer for discrete bin prediction. The model is optimized with adversarial objectives focusing on various discrepancies and geometries (<i>i.e.,</i> UADA, UPA, TMA). Forward propagation is shown in black, and backpropagation is highlighted in <span style="color: #E26C9F;">pink</span>. These objectives aim to maximize errors and minimize task performance, with visual emphasis on 3D-space manipulation and a focus on generating adversarial perturbation <span style="font-style: italic;">δ</span> during task execution, such as picking up a can.
+          EAZY identifies and removes hallucinatory image tokens from the input image, effectively mitigating hallucinations in LVLMs. The method is training-free and can be applied to various LVLM architectures. In this example, EAZY removes three image tokens, which eliminates the hallucinated objects, "apples" and "oranges", revealing the real object "kiwis".
         </p>
         <p style="font-size: 0.9rem; margin-top: 10px; font-style: italic; color: #666;">
-          Figure 1: Overall Adversarial Framework.
+          Figure 1: Removing three image tokens results in the elimination of the hallucinated objects, ”apples” and ”oranges”, and reveals the real
+object ”kiwis”.
         </p>
       </div>
     </div>
   </div>
 </section>
-
-<div class="simulation-title-container" style="background-color: #e9ecef; height: 80px; display: flex; align-items: center; justify-content: center;">
-  <h3 style="font-style: italic; font-weight: bold; font-size: 1.8rem; margin: 0;">Simulation Setup</h3>
-</div>
-<section class="hero teaser" style="padding: 50px 20px 10px 20px; background-color: #f9f9f9;">
-  <div class="container" style="max-width: 3000px; margin: 0 auto; text-align: center;">
-    <div class="hero-body">
-      <!-- Flexbox容器 -->
-      <div class="video-container" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <!-- 第一个视频 -->
-        <video id="teaser11" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/simulation/UADA_spatial.mp4" type="video/mp4">
-        </video>
-        <!-- 第二个视频 -->
-        <video id="teaser12" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/simulation/UADA_object.mp4" type="video/mp4">
-        </video>
-        <!-- 第三个视频 -->
-        <video id="teaser13" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/simulation/UADA_goal.mp4" type="video/mp4">
-        </video>
-        <!-- 第四个视频 -->
-        <video id="teaser14" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/simulation/UADA_long.mp4" type="video/mp4">
-        </video>
-      </div>
-      <!-- 放大标题 -->
-      <h2 class="subtitle has-text-centered" style="font-size: 2rem; font-weight: bold; color: #333; margin-top: 50px;">
-<!--        Targeted Manipulation Attack (TMA) across four LIBERO tasks.-->
-        Untargeted Action Discrepancy Attack (UADA) across four LIBERO tasks.
-<!--        Untargeted Position-aware Attack (UPA) across four LIBERO tasks.-->
-      </h2>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser" style="padding: 50px 20px 10px 20px">
-  <div class="container" style="max-width: 3000px; margin: 0 auto; text-align: center;">
-    <div class="hero-body">
-      <!-- Flexbox容器 -->
-      <div class="video-container" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <!-- 第一个视频 -->
-        <video id="teaser21" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px;  padding-right: 10px;">
-          <source src="./static/videos/simulation/UPA_spatial.mp4" type="video/mp4">
-        </video>
-        <!-- 第二个视频 -->
-        <video id="teaser22" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/simulation/UPA_object.mp4" type="video/mp4">
-        </video>
-        <!-- 第三个视频 -->
-        <video id="teaser23" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/simulation/UPA_goal.mp4" type="video/mp4">
-        </video>
-        <!-- 第四个视频 -->
-        <video id="teaser24" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/simulation/UPA_long.mp4" type="video/mp4">
-        </video>
-      </div>
-      <!-- 放大标题 -->
-      <h2 class="subtitle has-text-centered" style="font-size: 2rem; font-weight: bold; color: #333; margin-top: 50px;">
-        Untargeted Position-aware Attack (UPA) across four LIBERO tasks.
-      </h2>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser" style="padding: 50px 20px 10px 20px; background-color: #f9f9f9;">
-  <div class="container" style="max-width: 3000px; margin: 0 auto; text-align: center;">
-    <div class="hero-body">
-      <!-- Flexbox容器 -->
-      <div class="video-container" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <!-- 第一个视频 -->
-        <video id="teaser31" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/simulation/TMA_spatial.mp4" type="video/mp4">
-        </video>
-        <!-- 第二个视频 -->
-        <video id="teaser32" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/simulation/TMA_object.mp4" type="video/mp4">
-        </video>
-        <!-- 第三个视频 -->
-        <video id="teaser33" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/simulation/TMA_goal.mp4" type="video/mp4">
-        </video>
-        <!-- 第四个视频 -->
-        <video id="teaser34" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/simulation/TMA_long.mp4" type="video/mp4">
-        </video>
-      </div>
-      <!-- 放大标题 -->
-      <h2 class="subtitle has-text-centered" style="font-size: 2rem; font-weight: bold; color: #333; margin-top: 50px;">
-        Targeted Manipulation Attack (TMA) across four LIBERO tasks.
-<!--        Untargeted Action Discrepancy Attack (UADA) across four LIBERO tasks.-->
-<!--        Untargeted Position-aware Attack (UPA) across four LIBERO tasks.-->
-      </h2>
-    </div>
-  </div>
-</section>
-
-<div class="simulation-title-container" style="background-color: #e9ecef; height: 80px; display: flex; align-items: center; justify-content: center;">
-  <h3 style="font-style: italic; font-weight: bold; font-size: 1.8rem; margin: 0;">Physical Setup</h3>
-</div>
-
-<section class="hero teaser" style="padding: 50px 20px 10px 20px; background-color: #f9f9f9;">
-  <div class="container" style="max-width: 3000px; margin: 0 auto; text-align: center;">
-    <div class="hero-body">
-      <!-- Flexbox容器 -->
-      <div class="video-container" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <!-- 第一个视频 -->
-        <video id="teaser41" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/physcial/UADA_spatial.mp4" type="video/mp4">
-        </video>
-        <!-- 第二个视频 -->
-        <video id="teaser42" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/physcial/UADA_object.mp4" type="video/mp4">
-        </video>
-        <!-- 第三个视频 -->
-        <video id="teaser43" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/physcial/UADA_goal.mp4" type="video/mp4">
-        </video>
-        <!-- 第四个视频 -->
-        <video id="teaser44" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/physcial/UADA_long.mp4" type="video/mp4">
-        </video>
-      </div>
-      <!-- 放大标题 -->
-      <h2 class="subtitle has-text-centered" style="font-size: 2rem; font-weight: bold; color: #333; margin-top: 50px;">
-<!--        Targeted Manipulation Attack (TMA) across four LIBERO tasks.-->
-        Untargeted Action Discrepancy Attack (UADA) across four LIBERO tasks.
-<!--        Untargeted Position-aware Attack (UPA) across four LIBERO tasks.-->
-      </h2>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser" style="padding: 50px 20px 10px 20px">
-  <div class="container" style="max-width: 3000px; margin: 0 auto; text-align: center;">
-    <div class="hero-body">
-      <!-- Flexbox容器 -->
-      <div class="video-container" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <!-- 第一个视频 -->
-        <video id="teaser51" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px;  padding-right: 10px;">
-          <source src="./static/videos/physcial/UPA_spatial.mp4" type="video/mp4">
-        </video>
-        <!-- 第二个视频 -->
-        <video id="teaser52" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/physcial/UPA_object.mp4" type="video/mp4">
-        </video>
-        <!-- 第三个视频 -->
-        <video id="teaser53" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/physcial/UPA_goal.mp4" type="video/mp4">
-        </video>
-        <!-- 第四个视频 -->
-        <video id="teaser54" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/physcial/UPA_long.mp4" type="video/mp4">
-        </video>
-      </div>
-      <!-- 放大标题 -->
-      <h2 class="subtitle has-text-centered" style="font-size: 2rem; font-weight: bold; color: #333; margin-top: 50px;">
-        Untargeted Position-aware Attack (UPA) across four LIBERO tasks.
-      </h2>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser" style="padding: 50px 20px 10px 20px; background-color: #f9f9f9;">
-  <div class="container" style="max-width: 3000px; margin: 0 auto; text-align: center;">
-    <div class="hero-body">
-      <!-- Flexbox容器 -->
-      <div class="video-container" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <!-- 第一个视频 -->
-        <video id="teaser61" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/physcial/TMA_spatial.mp4" type="video/mp4">
-        </video>
-        <!-- 第二个视频 -->
-        <video id="teaser62" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/physcial/TMA_object.mp4" type="video/mp4">
-        </video>
-        <!-- 第三个视频 -->
-        <video id="teaser63" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/physcial/TMA_goal.mp4" type="video/mp4">
-        </video>
-        <!-- 第四个视频 -->
-        <video id="teaser64" autoplay muted loop playsinline style="width: 33%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding-right: 10px;">
-          <source src="./static/videos/physcial/TMA_long.mp4" type="video/mp4">
-        </video>
-      </div>
-      <!-- 放大标题 -->
-      <h2 class="subtitle has-text-centered" style="font-size: 2rem; font-weight: bold; color: #333; margin-top: 50px;">
-        Targeted Manipulation Attack (TMA) across four LIBERO tasks.
-<!--        Untargeted Action Discrepancy Attack (UADA) across four LIBERO tasks.-->
-<!--        Untargeted Position-aware Attack (UPA) across four LIBERO tasks.-->
-      </h2>
-    </div>
-  </div>
-</section>
-
-<div class="simulation-title-container" style="background-color: #e9ecef; height: 80px; display: flex; align-items: center; justify-content: center;">
-  <h3 style="font-style: italic; font-weight: bold; font-size: 1.8rem; margin: 0;">Real-world Impact</h3>
-</div>
-
-<section class="hero teaser" style="padding: 50px 20px 10px 20px; background-color: #f9f9f9;">
-  <div class="container" style="max-width: 3000px; margin: 0 auto; text-align: center;">
-    <div class="hero-body">
-      <!-- Flexbox容器 -->
-      <div class="video-container" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <video id="teaser71" autoplay muted loop playsinline style="width: 40%; height: auto; border: 2px solid #ccc; border-radius: 10px; padding: 30px 30px 30px 30px;">
-          <source src="./static/videos/impact.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 
 
 
 
 <section class="section">
   <div class="container is-max-desktop">
+    <h2 class="title">Experiments</h2>
+    <div class="content has-text-justified">
+      <p>
+        We conduct extensive experiments to evaluate the effectiveness of EAZY in detecting and mitigating object hallucinations across various LVLMs and datasets. Our results demonstrate that EAZY significantly outperforms existing methods in both detection accuracy and mitigation effectiveness, while maintaining model utility.
+      </p>
+    </div>
 
-    <div class="columns is-centered">
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Link</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            We would like to express our gratitude to the <a href="https://openvla.github.io/">OpenVLA</a> team for open-sourcing their code, which has greatly enriched the community and opened up new possibilities for innovation
+    <!-- Experimental Results Grid -->
+    <div class="columns is-multiline is-centered" style="margin-top: 30px;">
+      
+      <!-- chair -->
+      <div class="column is-4">
+        <div class="has-text-centered">
+          <img src="./static/images/chair_exp.png"
+               alt="Validation Results"
+               style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          <p class="has-text-weight-semibold" style="margin-top: 15px;">CHAIR Results</p>
+          <p class="is-size-7 has-text-grey">
+            EAZY's validation results show a significant reduction in hallucination rates across multiple LVLMs, demonstrating its robustness and adaptability.
           </p>
         </div>
       </div>
+
+      <!-- POPE result -->
+      <div class="column is-4">
+        <div class="has-text-centered">
+          <img src="./static/images/pope_exp.png"
+               alt="Model Performance Comparison"
+               style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          <p class="has-text-weight-semibold" style="margin-top: 15px;">POPE Results</p>
+          <p class="is-size-7 has-text-grey">
+            POPE results indicate that EAZY effectiveness.
+          </p>
+        </div>
+      </div>
+
+      <!-- Detection Performance -->
+      <div class="column is-4">
+        <div class="has-text-centered">
+          <img src="./static/images/detection_exp.png"
+               alt="Detection Performance"
+               style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          <p class="has-text-weight-semibold" style="margin-top: 15px;">Detection Performance</p>
+          <p class="is-size-7 has-text-grey">
+            EAZY achieves superior detection accuracy across multiple LVLM architectures, consistently outperforming baseline methods.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Additional Results Section -->
+    <div class="content has-text-justified" style="margin-top: 40px;">
+      <h3 class="title is-4">Key Findings</h3>
+      <ul>
+        <li><strong>Detection Accuracy:</strong> EAZY achieves 15% improvement in unsupervised object hallucination detection compared to previous methods.</li>
+        <li><strong>Mitigation Effectiveness:</strong> By removing only 1.5% of image tokens, EAZY effectively mitigates hallucinations while preserving model utility.</li>
+        <li><strong>Cross-Model Generalization:</strong> The method demonstrates consistent performance across various LVLM architectures including LLaVA, Shikra, and LLaVA-Next.</li>
+        <li><strong>Training-Free Approach:</strong> EAZY requires no additional training, making it easily adaptable to existing models.</li>
+      </ul>
     </div>
   </div>
-</div>
 </section>
 
 
@@ -434,12 +252,16 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{wang2024exploring,
-         title={Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics},
-         author={Taowen Wang and Dongfang Liu and James Chenhao Liang and Wenhao Yang and Qifan Wang and Cheng Han and Jiebo Luo and Ruixiang Tang},
-         journal = {arXiv preprint arXiv:2411.13587},
-         year={2024}
-}</code></pre>
+    <pre><code>@misc{che2025hallucinatoryimagetokenstrainingfree,
+      title={Hallucinatory Image Tokens: A Training-free EAZY Approach on Detecting and Mitigating Object Hallucinations in LVLMs}, 
+      author={Liwei Che and Tony Qingze Liu and Jing Jia and Weiyi Qin and Ruixiang Tang and Vladimir Pavlovic},
+      year={2025},
+      eprint={2503.07772},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2503.07772}, 
+}
+</code></pre>
   </div>
 </section>
 
@@ -448,10 +270,10 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="https://arxiv.org/pdf/2411.13587">
+         href="https://arxiv.org/pdf/2503.07772">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/William-wAng618" class="external-link" disabled>
+      <a class="icon-link" href="#" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
