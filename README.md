@@ -2,11 +2,14 @@ Page in https://eazy.github.io/
 
 If you find our work useful, please cite:
 ```
-@article{che2025eazy,
-  title={Eazy: Eliminating hallucinations in lvlms by zeroing out hallucinatory image tokens},
-  author={Che, Liwei and Liu, Tony Qingze and Jia, Jing and Qin, Weiyi and Tang, Ruixiang and Pavlovic, Vladimir},
-  journal={arXiv preprint arXiv:2503.07772},
-  year={2025}
+@misc{che2025hallucinatoryimagetokenstrainingfree,
+      title={Hallucinatory Image Tokens: A Training-free EAZY Approach on Detecting and Mitigating Object Hallucinations in LVLMs}, 
+      author={Liwei Che and Tony Qingze Liu and Jing Jia and Weiyi Qin and Ruixiang Tang and Vladimir Pavlovic},
+      year={2025},
+      eprint={2503.07772},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2503.07772}, 
 }
 ```
 
