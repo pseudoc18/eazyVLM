@@ -236,7 +236,7 @@ object ”kiwis”.
 
     <!-- Additional Results Section -->
     <div class="content has-text-justified" style="margin-top: 40px;">
-      <h3 class="title is-4">Key Findings</h3>
+      <h3 class="title is-4">Key Results</h3>
       <ul>
         <li><strong>Detection Accuracy:</strong> EAZY achieves 15% improvement in unsupervised object hallucination detection compared to previous methods.</li>
         <li><strong>Mitigation Effectiveness:</strong> By removing only 1.5% of image tokens, EAZY effectively mitigates hallucinations while preserving model utility.</li>
@@ -247,7 +247,59 @@ object ”kiwis”.
   </div>
 </section>
 
+<!-- Case Study Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title">Case Studies</h2>
+    <div class="content has-text-justified">
+      <p>
+        We present qualitative case studies demonstrating EAZY's effectiveness in detecting and mitigating object hallucinations across diverse scenarios. These examples showcase how our method identifies problematic image tokens and successfully eliminates hallucinated objects while preserving the accuracy of real object detection.
+      </p>
+    </div>
 
+    <!-- Case Study Images Grid -->
+    <div class="columns is-multiline is-centered" style="margin-top: 30px;">
+      
+      <!-- Case Study 1 -->
+      <div class="column is-6">
+        <div class="has-text-centered">
+          <img src="./static/images/case_study/airport_case.pdf"
+               alt="Airport Case Study"
+               style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          <p class="has-text-weight-semibold" style="margin-top: 15px;">Airport Scene Analysis</p>
+          <p class="is-size-7 has-text-grey">
+            EAZY successfully identifies and removes hallucinated objects in complex airport scenes, demonstrating its effectiveness in real-world environments with multiple objects and intricate backgrounds.
+          </p>
+        </div>
+      </div>
+
+      <!-- Case Study 2 -->
+      <div class="column is-6">
+        <div class="has-text-centered">
+          <img src="./static/images/case_study/cat_case.pdf"
+               alt="Cat Case Study"
+               style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          <p class="has-text-weight-semibold" style="margin-top: 15px;">Animal Scene Detection</p>
+          <p class="is-size-7 has-text-grey">
+            In this cat-focused scenario, EAZY effectively eliminates false positive detections while maintaining accurate identification of the actual animals present in the scene.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Case Study Summary -->
+    <div class="content has-text-justified" style="margin-top: 40px;">
+      <h3 class="title is-4">Case Study Insights</h3>
+      <ul>
+        <li><strong>Diverse Scenarios:</strong> EAZY performs consistently across various scene types including indoor, outdoor, and complex environments.</li>
+        <li><strong>Precision:</strong> The method accurately identifies hallucinatory tokens without affecting genuine object detection.</li>
+        <li><strong>Robustness:</strong> Demonstrates effectiveness across different object categories and scene complexities.</li>
+        <li><strong>Visual Quality:</strong> Maintains image quality and context while removing problematic tokens.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
