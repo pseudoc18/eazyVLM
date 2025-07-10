@@ -1,4 +1,4 @@
-Page in https://eazyVLM.github.io/
+Page in https://pseudoc18.github.io/eazyVLM/
 
 If you find our work useful, please cite:
 ```
