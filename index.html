@@ -3,7 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Hallucinatory Image Tokens: A Training-free EAZY Approach on Detecting and Mitigating Object Hallucinations in LVLMs">
+        content="Hallucinatory Image Tokens: A Training-f    <!-- Caption -->
+    <div class="columns is-centered has-text-centered" style="margin-top: -20px;">
+      <div class="column is-full" style="max-width: 100%; padding: 0 10%;">
+        <p style="font-size: 0.9rem; margin-top: 10px; font-style: italic; color: #666;">
+          Figure 1: Removing three image tokens results in the elimination of the hallucinated objects, "apples" and "oranges", and reveals the real
+object "kiwis".
+        </p>
+      </div>
+    </div>
+    
+    <!-- Brief intro of EAZY -->
+    <div class="columns is-centered has-text-justified" style="margin-top: 20px;">
+      <div class="column is-full" style="max-width: 100%; padding: 0 10%;">
+        <p style="text-align: justify; font-size: 1rem; line-height: 1.5; margin: 0;">
+          EAZY identifies and removes hallucinatory image tokens from the input image, effectively mitigating hallucinations in LVLMs. The method is training-free and can be applied to various LVLM architectures. In this example, EAZY removes three image tokens, which eliminates the hallucinated objects, "apples" and "oranges", revealing the real object "kiwis".
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section> on Detecting and Mitigating Object Hallucinations in LVLMs">
   <meta name="keywords" content="Hallucination Detection and Mitigation in LVLMs">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hallucinatory Image Tokens: A Training-free EAZY Approach on Detecting and Mitigating Object Hallucinations in LVLMs</title>
@@ -110,39 +130,10 @@
   </div>
 </section>
 
-<!--<section class="section">-->
-<!--  <div class="container is-max-desktop">-->
-<!--    &lt;!&ndash; Abstract. &ndash;&gt;-->
-<!--    <div class="columns is-centered has-text-centered">-->
-<!--      <div class="column is-four-fifths">-->
-<!--        <h2 class="title is-3">Abstract</h2>-->
-<!--        <div class="content has-text-justified">-->
-<!--          <p>-->
-<!--            Recently in robotics, Vision-Language-Action (VLA) models have emerged as a transformative approach, enabling robots to execute complex tasks by integrating visual and linguistic inputs within an end-to-end learning framework. While VLA models offer significant capabilities, they also introduce new attack surfaces, making them vulnerable to adversarial attacks. With these vulnerabilities largely unexplored, this paper systematically quantifies the robustness of VLA-based robotic systems. Recognizing the unique demands of robotic execution,-->
-<!--            our attack objectives target the inherent spatial and functional characteristics of robotic systems.-->
-<!--            In particular, we introduce an untargeted position-aware attack objective that leverages spatial foundations to destabilize robotic actions, and a targeted attack objective that manipulates the robotic trajectory. Additionally, we design an adversarial patch generation approach that places a small, colorful patch within the camera's view, effectively executing the attack in both digital and physical environments.-->
-<!--            Our evaluation reveals a marked degradation in task success rates, with up to a 100\% reduction across a suite of simulated robotic tasks, highlighting critical security gaps in current VLA architectures. By unveiling these vulnerabilities and proposing actionable evaluation metrics, this work advances both the understanding and enhancement of safety for VLA-based robotic systems, underscoring the necessity for developing robust defense strategies prior to physical-world deployments.-->
-<!--          </p>-->
-<!--        </div>-->
-<!--      </div>-->
 
-<!--          &lt;!&ndash; Main Image &ndash;&gt;-->
-<!--    <div class="columns is-centered has-text-centered" style="margin-top: 20px;">-->
-<!--      <div class="column is-half">-->
-<!--        <img src="./static/images/main.png"-->
-<!--             class="interpolation-image"-->
-<!--             alt="Interpolation end reference image."-->
-<!--             style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">-->
-<!--        <p class="is-bold" style="margin-top: 10px;">Main Figure</p>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
 
 <section class="section" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
   <div class="container is-max-desktop" style="width: 100%;">
-    <!-- Abstract -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
@@ -154,7 +145,6 @@
       </div>
     </div>
 
-    <!-- Main Image -->
     <div class="columns is-centered has-text-centered" style="margin-top: 40px;">
       <div class="column" style="width: 100%; text-align: center;">
         <img src="./static/images/zero_out.png"
@@ -163,15 +153,135 @@
       </div>
     </div>
 
-    <!-- Caption -->
-    <div class="columns is-centered has-text-centered" style="margin-top: -20px;">
-      <div class="column is-full" style="max-width: 100%; padding: 0 10%;">
+    <div class="columns is-centered has-text-centered" style="margin-top: 20px;">
+      <div class="column is-full" style="max-width: 80%; padding: 0;">
         <p style="text-align: justify; font-size: 1rem; line-height: 1.5; margin: 0;">
-          EAZY identifies and removes hallucinatory image tokens from the input image, effectively mitigating hallucinations in LVLMs. The method is training-free and can be applied to various LVLM architectures. In this example, EAZY removes three image tokens, which eliminates the hallucinated objects, "apples" and "oranges", revealing the real object "kiwis".
+          [cite_start]EAZY identifies and removes hallucinatory image tokens from the input image, effectively mitigating hallucinations in LVLMs[cite: 19]. [cite_start]The method is training-free and can be applied to various LVLM architectures[cite: 21]. [cite_start]In this example, EAZY removes three image tokens, which eliminates the hallucinated objects, "apples" and "oranges", revealing the real object "kiwis"[cite: 62].
         </p>
         <p style="font-size: 0.9rem; margin-top: 10px; font-style: italic; color: #666;">
-          Figure 1: Removing three image tokens results in the elimination of the hallucinated objects, ”apples” and ”oranges”, and reveals the real
-object ”kiwis”.
+          [cite_start]Figure 1: Removing three image tokens results in the elimination of the hallucinated objects, ”apples” and ”oranges”, and reveals the real object ”kiwis”[cite: 62].
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Connecting Generated Object Tokens with Their Visual Anchor</h2>
+    <div class="content has-text-justified">
+      <p>
+        We first investigated an important question: How do Large Vision-Language Models (LVLMs) extract visual information and generate text tokens accordingly? 
+      </p>
+    </div>
+
+    <div class="columns is-vcentered" style="margin-top: 30px;">
+      <div class="column is-half">
+        <h3 class="title is-4">1. Locating Object Information in Model Layers</h3>
+        <div class="content has-text-justified">
+          <p>
+            [cite_start]Through a comprehensive analysis of attention patterns, we found that Large Vision-Language Models (LVLMs) primarily extract and process object-related information in their middle-to-late layers, not in the initial or final layers as one might expect[cite: 64, 85]. [cite_start]We introduced a new metric, the Object Localization Visual Attention Ratio (OL-VAR), to quantify this[cite: 148, 149]. [cite_start]The results show that for a model like LLaVA-1.5, layers 10 through 25 are critical for linking generated object tokens to their corresponding regions in the image[cite: 151]. [cite_start]This discovery provides a precise tool to understand where the model "looks" when generating text about objects[cite: 66].
+          </p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <img src="./static/images/olvar_llava1.5.png"
+               alt="OL-VAR and Attention Heatmap Visualization"
+               style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+          <p class="is-size-7 has-text-grey" style="margin-top: 10px;">
+            (Placeholder) Visualization showing OL-VAR scores peaking in middle layers and the corresponding distributed attention heatmap.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-vcentered" style="margin-top: 30px;">
+      <div class="column is-half is-hidden-desktop">
+        <div class="has-text-centered">
+            <img src="./static/images/obj_removal_k.png"
+                 alt="Object Removal Rates Graph"
+                 style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+            <p class="is-size-7 has-text-grey" style="margin-top: 10px;">
+                (Placeholder) Graph showing high removal rates for hallucinated objects vs. low rates for real objects after zeroing-out HITs.
+            </p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <h3 class="title is-4">2. Hallucinatory Image Tokens (HITs)</h3>
+        <div class="content has-text-justified">
+          <p>
+            [cite_start]Our main discovery is that a small, specific subset of image tokens, which we term Hallucinatory Image Tokens (HITs), are the primary drivers of object hallucination[cite: 17, 73, 194]. [cite_start]These tokens receive high attention scores from the hallucinated object words during generation[cite: 17]. [cite_start]Astonishingly, by simply "zeroing out" a tiny fraction of these HITs (e.g., only 1.5% of all image tokens), we can effectively eliminate the hallucinated object from the model's response[cite: 18, 88]. [cite_start]Crucially, this operation has minimal impact on real objects, which remain robustly identified[cite: 76, 91, 217]. This distinct behavior provides a powerful, training-free method to both detect and mitigate hallucinations.
+          </p>
+        </div>
+      </div>
+      <div class="column is-half is-hidden-touch">
+        <div class="has-text-centered">
+            <img src="./static/images/placeholder_removal_rates.png"
+                 alt="Object Removal Rates Graph"
+                 style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+            <p class="is-size-7 has-text-grey" style="margin-top: 10px;">
+                (Placeholder) Graph showing high removal rates for hallucinated objects vs. low rates for real objects after zeroing-out HITs.
+            </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section class="section" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+  <div class="container is-max-desktop" style="width: 100%;">
+    <h2 class="title is-3" style="margin-top: 40px;">Methodology</h2>
+
+    <div class="columns is-centered" style="margin-top: 20px;">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Hallucination Detection</h3>
+        <div class="content has-text-justified">
+          <p>
+            The EAZY method identifies object hallucinations by leveraging the insight that real and hallucinated objects respond differently to the removal of high-attention image tokens. The process begins by generating an initial response from the LVLM for a given image. [cite_start]From this response, potential object tokens are extracted using NLP techniques like POS tagging[cite: 232, 247]. [cite_start]For each identified object token, the method pinpoints the top-K image tokens that received the highest attention scores from it[cite: 248, 249, 250]. [cite_start]These top-K tokens are considered candidate Hallucinatory Image Tokens (HITs)[cite: 229].
+          </p>
+          <p>
+            [cite_start]Next, the model's input is modified by "zeroing out" these candidate HITs, replacing their embeddings with zero vectors[cite: 251, 252]. [cite_start]A new response is then generated using this modified input[cite: 255]. If an object token from the original response disappears in the new response, EAZY classifies it as a hallucination. [cite_start]Conversely, if the object token remains, it is classified as a real object[cite: 255]. [cite_start]This differential behavior serves as a robust, training-free mechanism for detecting hallucinations, showing that real objects are largely unaffected by this zeroing-out process, while hallucinated ones are effectively eliminated[cite: 229].
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered" style="margin-top: 20px;">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Hallucination Mitigation</h3>
+        <div class="content has-text-justified">
+          <p>
+            [cite_start]The mitigation process in EAZY follows a similar logic to detection and is designed to correct the initial, potentially flawed output of an LVLM[cite: 257]. [cite_start]First, an initial inference is performed to get the model's description of the image[cite: 257]. [cite_start]All object tokens, both real and hallucinated, are extracted from this initial response[cite: 258]. [cite_start]For all identified objects, the method aggregates the top-K candidate HITs into a single set[cite: 259, 283].
+          </p>
+          <p>
+            [cite_start]These aggregated candidate HITs are then zeroed out from the image token sequence to perform a second, "estimation" inference[cite: 260]. [cite_start]By comparing the initial response with the second one, EAZY identifies the objects that disappeared, flagging them as hallucinations[cite: 281]. [cite_start]Finally, the candidate HITs corresponding only to these confirmed hallucinated objects are collected to form a final zero-out list[cite: 282, 283]. [cite_start]This final set of tokens is zeroed out from the original input, and a final inference is run to produce a corrected, mitigated response that is free of the identified hallucinations while preserving the accurately described objects[cite: 290].
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 40px;">
+      <div class="column" style="width: 100%; text-align: center;">
+        <img src="./static/images/EAZY.png"
+             alt="Method Overview"
+             style="width: 100%; height: auto;">
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10px;">
+      <div class="column is-full" style="max-width: 100%; padding: 0 10%;">
+        <p style="font-size: 0.9rem; margin-top: 10px; font-style: italic; color: #666;">
+          Figure 6: Overview of the proposed EAZY method. The process starts with an image input encoded into image tokens. The LVLM generates an initial response with hallucinated objects (apples, oranges). EAZY estimates HITs via text-to-image token-wise attention distribution. With HITs zeroed out, the final response has the hallucinations disappeared, revealing correct objects (kiwis).
         </p>
       </div>
     </div>
@@ -190,51 +300,54 @@ object ”kiwis”.
       </p>
     </div>
 
-    <!-- Experimental Results Grid -->
-    <div class="columns is-multiline is-centered" style="margin-top: 30px;">
+    <div style="margin-top: 30px;">
       
-      <!-- chair -->
-      <div class="column is-4">
-        <div class="has-text-centered">
-          <img src="./static/images/chair_exp.png"
-               alt="Validation Results"
-               style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
-          <p class="has-text-weight-semibold" style="margin-top: 15px;">CHAIR Results</p>
-          <p class="is-size-7 has-text-grey">
-            EAZY's validation results show a significant reduction in hallucination rates across multiple LVLMs, demonstrating its robustness and adaptability.
-          </p>
+      <div class="columns is-centered" style="margin-top: 20px;">
+        <div class="column is-two-thirds">
+            <div class="has-text-centered">
+              <img src="./static/images/chair_exp.png"
+                   alt="CHAIR Results"
+                   style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              <p class="has-text-weight-semibold" style="margin-top: 15px;">CHAIR Results</p>
+              <p class="is-size-7 has-text-grey">
+                EAZY's validation results show a significant reduction in hallucination rates across multiple LVLMs, demonstrating its robustness and adaptability.
+              </p>
+            </div>
         </div>
       </div>
 
-      <!-- POPE result -->
-      <div class="column is-4">
-        <div class="has-text-centered">
-          <img src="./static/images/pope_exp.png"
-               alt="Model Performance Comparison"
-               style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
-          <p class="has-text-weight-semibold" style="margin-top: 15px;">POPE Results</p>
-          <p class="is-size-7 has-text-grey">
-            POPE results indicate that EAZY effectiveness.
-          </p>
+
+      <div class="columns is-centered" style="margin-top: 30px;">
+        <div class="column is-two-thirds">
+            <div class="has-text-centered">
+              <img src="./static/images/pope_exp.png"
+                   alt="POPE Results"
+                   style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              <p class="has-text-weight-semibold" style="margin-top: 15px;">POPE Results</p>
+              <p class="is-size-7 has-text-grey">
+                POPE results indicate EAZY's effectiveness.
+              </p>
+            </div>
         </div>
       </div>
 
-      <!-- Detection Performance -->
-      <div class="column is-4">
-        <div class="has-text-centered">
-          <img src="./static/images/detection_exp.png"
-               alt="Detection Performance"
-               style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
-          <p class="has-text-weight-semibold" style="margin-top: 15px;">Detection Performance</p>
-          <p class="is-size-7 has-text-grey">
-            EAZY achieves superior detection accuracy across multiple LVLM architectures, consistently outperforming baseline methods.
-          </p>
+
+      <div class="columns is-centered" style="margin-top: 30px;">
+        <div class="column is-two-thirds">
+            <div class="has-text-centered">
+              <img src="./static/images/detection_exp.png"
+                   alt="Detection Performance"
+                   style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              <p class="has-text-weight-semibold" style="margin-top: 15px;">Detection Performance</p>
+              <p class="is-size-7 has-text-grey">
+                EAZY achieves superior detection accuracy across multiple LVLM architectures, consistently outperforming baseline methods.
+              </p>
+            </div>
         </div>
       </div>
 
     </div>
 
-    <!-- Additional Results Section -->
     <div class="content has-text-justified" style="margin-top: 40px;">
       <h3 class="title is-4">Key Results</h3>
       <ul>
@@ -247,7 +360,6 @@ object ”kiwis”.
   </div>
 </section>
 
-<!-- Case Study Section -->
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title">Case Studies</h2>
@@ -257,38 +369,38 @@ object ”kiwis”.
       </p>
     </div>
 
-    <!-- Case Study Images Grid -->
-    <div class="columns is-multiline is-centered" style="margin-top: 30px;">
+    <div style="margin-top: 30px;">
       
-      <!-- Case Study 1 -->
-      <div class="column is-6">
-        <div class="has-text-centered">
-          <img src="./static/images/airport_case.png"
-               alt="Airport Case Study"
-               style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
-          <p class="has-text-weight-semibold" style="margin-top: 15px;">Airport Scene</p>
-          <p class="is-size-7 has-text-grey">
-            EAZY successfully identifies and removes hallucinated objects in complex airport scenes, demonstrating its effectiveness in real-world environments with multiple objects and intricate backgrounds.
-          </p>
+      <div class="columns is-centered" style="margin-top: 20px;">
+        <div class="column is-three-quarters">
+          <div class="has-text-centered">
+            <img src="./static/images/airport_case.png"
+                 alt="Airport Case Study"
+                 style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+            <p class="has-text-weight-semibold" style="margin-top: 15px;">Airport Scene</p>
+            <p class="is-size-7 has-text-grey">
+              EAZY successfully identifies and removes hallucinated objects in complex airport scenes, demonstrating its effectiveness in real-world environments with multiple objects and intricate backgrounds.
+            </p>
+          </div>
         </div>
       </div>
 
-      <!-- Case Study 2 -->
-      <div class="column is-6">
-        <div class="has-text-centered">
-          <img src="./static/images/cat_case.png"
-               alt="Cat Case Study"
-               style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
-          <p class="has-text-weight-semibold" style="margin-top: 15px;">Four Cats Lying on the Table</p>
-          <p class="is-size-7 has-text-grey">
-            In this cat-focused scenario, by removing just one hallucinatory image token, the EAZY output eliminated the hallucinated "glove" and correct the numbers of cats as well as other objects on the table.
-          </p>
+      <div class="columns is-centered" style="margin-top: 30px;">
+        <div class="column is-three-quarters">
+          <div class="has-text-centered">
+            <img src="./static/images/cat_case.png"
+                 alt="Cat Case Study"
+                 style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+            <p class="has-text-weight-semibold" style="margin-top: 15px;">Four Cats Lying on the Table</p>
+            <p class="is-size-7 has-text-grey">
+              In this cat-focused scenario, by removing just one hallucinatory image token, the EAZY output eliminated the hallucinated "glove" and correct the numbers of cats as well as other objects on the table.
+            </p>
+          </div>
         </div>
       </div>
 
     </div>
 
-    <!-- Case Study Summary -->
     <div class="content has-text-justified" style="margin-top: 40px;">
       <h3 class="title is-4">Case Study Insights</h3>
       <ul>
