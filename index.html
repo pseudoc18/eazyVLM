@@ -6,7 +6,7 @@
         content="Hallucinatory Image Tokens: A Training-free EAZY Approach on Detecting and Mitigating Object Hallucinations in LVLMs">
   <meta name="keywords" content="Hallucination Detection and Mitigation in LVLMs">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><span style="background: linear-gradient(to right, #ff7e5f, #feb47b); -webkit-background-clip: text; background-clip: text; color: transparent; filter: blur(1px);">Hallucinatory Image Tokens</span>: A Training-free <span style="font-family: 'Castoro', serif; font-style: italic;">EAZY</span> Approach on Detecting and Mitigating Object Hallucinations in LVLMs</title>
+  <title> <span style="background: linear-gradient(to right, #ff7e5f, #2c6bea); -webkit-background-clip: text; background-clip: text; color: transparent; filter: blur(1px);">Hallucinatory Image Tokens</span>: A Training-free <span style="font-family: 'Castoro', serif; font-style: italic;">EAZY</span> Approach on Detecting and Mitigating Object Hallucinations in LVLMs</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -167,9 +167,11 @@
       </p>
     </div>
 
+    
+
     <div class="columns is-vcentered" style="margin-top: 30px;">
       <div class="column is-half">
-        <h3 class="title is-4">1. Locating Object Information in Model Layers</h3>
+        <h3 class="title is-4">Locating Object Information in Model Layers.</h4>
         <div class="content has-text-justified">
           <p>
             Through a comprehensive analysis of attention patterns, we found that Large Vision-Language Models (LVLMs) primarily extract and process object-related information in their middle-to-late layers, not in the initial or final layers as one might expect. We introduced a new metric, the Object Localization Visual Attention Ratio (OL-VAR), to quantify this. The results show that for a model like LLaVA-1.5, layers 10 through 25 are critical for linking generated object tokens to their corresponding regions in the image. This discovery provides a precise tool to understand where the model "looks" when generating text about objects.
@@ -180,13 +182,7 @@
         <div class="has-text-centered">
           <img src="./static/images/olvar_llava1.5.png"
                alt="OL-VAR"
-               style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
-          <img src="./static/images/dog heatmap_bbox.png"
-               alt="Token-wise attention heatmap"
-               style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
-          <p class="is-size-7 has-text-grey" style="margin-top: 10px;">
-            Visualization showing OL-VAR scores peaking in middle layers and the corresponding distributed attention heatmap.
-          </p>
+               style="width: 100%; height: 200px; border: 1px solid #ddd; border-radius: 8px;">
         </div>
       </div>
     </div>
@@ -194,11 +190,11 @@
     <div class="columns is-vcentered" style="margin-top: 30px;">
       <div class="column is-half is-hidden-desktop">
         <div class="has-text-centered">
-            <img src="./static/images/obj_removal_k.png"
-                 alt="Object Removal Rates Graph"
+            <img src="./static/images/dog heatmap_bbox.png"
+                 alt="dog to image token attention heatmap"
                  style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
             <p class="is-size-7 has-text-grey" style="margin-top: 10px;">
-                (Placeholder) Graph showing high removal rates for hallucinated objects vs. low rates for real objects after zeroing-out HITs.
+                Left: Visualization showing OL-VAR scores peaking in middle layers and highest at Layer-15, which is aligned with our obeservation of the token-wise attention heatmap pattern in Figure 2. Right: Utilizing the layer-15 attention, we can effective bounding the corresponding image region of "dog". 
             </p>
         </div>
       </div>
