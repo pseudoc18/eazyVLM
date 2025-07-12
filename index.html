@@ -141,7 +141,7 @@
       </div>
     </div>
 
-    <div class="columns is-centered has-text-centered" style="margin-top: 20px;">
+    <div class="columns is-left has-text-centered" style="margin-top: 20px;">
       <div class="column is-full" style="max-width: 80%; padding: 0;">
         <p style="font-size: 0.9rem; margin-top: 10px; font-style: italic; color: #666;">
           Figure 1: Removing three image tokens results in the elimination of the hallucinated objects, "apples" and "oranges", and reveals the real object "kiwis".
@@ -172,7 +172,7 @@
         <div class="has-text-centered">
           <img src="./static/images/layer_attention.png"
                alt="token-wise attention heatmap"
-               style="width: 80%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+               style="width: 200%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
           <p class="is-size-7 has-text-grey" style="margin-top: 10px;">
             Figure 2: Token-wise attention heatmap on Layer-32 and Layer-15 of LLaVA-1.5
           </p>
@@ -196,14 +196,14 @@
       <div class="has-text-centered">
         <img src="./static/images/olvar_llava1.5.png"
              alt="OL-VAR"
-             style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+             style="width: 50%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
       </div>
     </div>
     <div class="column is-half">
       <div class="has-text-centered">
         <img src="./static/images/dog heatmap_bbox.png"
              alt="dog to image token attention heatmap"
-             style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+             style="width: 50%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
         <p class="is-size-7 has-text-grey" style="margin-top: 10px;">
           Figure3: Left: Visualization showing OL-VAR scores peaking in middle layers and highest at Layer-15, which is aligned with our observation of the token-wise attention heatmap pattern in Figure 2. Right: Utilizing the layer-15 attention, we can effectively bound the corresponding image region of "dog". 
         </p>
