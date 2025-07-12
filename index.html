@@ -6,7 +6,7 @@
         content="Hallucinatory Image Tokens: A Training-free EAZY Approach on Detecting and Mitigating Object Hallucinations in LVLMs">
   <meta name="keywords" content="Hallucination Detection and Mitigation in LVLMs">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hallucinatory Image Tokens: A Training-free EAZY Approach on Detecting and Mitigating Object Hallucinations in LVLMs</title>
+  <title> Hallucinatory Image Tokens: A Training-free <span style="font-family: 'Castoro', serif; font-style: italic;">EAZY</span> Approach on Detecting and Mitigating Object Hallucinations in LVLMs</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -48,7 +48,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title fancy-title"><span class="gradient-text">Hallucinatory Image Tokens</span>: A Training-free <span class="serif-italic">EAZY</span> Approach on Detecting and Mitigating Object Hallucinations in LVLMs</h1>
+          <h1 class="title is-1 publication-title">Hallucinatory Image Tokens: A Training-free <span style="font-family: 'Castoro', serif; font-style: italic;">EAZY</span> Approach on Detecting and Mitigating Object Hallucinations in LVLMs</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://www.linkedin.com/in/liweiche/">Liwei Che</a><sup>1</sup>,</span>
@@ -167,7 +167,17 @@
       </p>
     </div>
 
-    
+    <div class="column is-half">
+        <div class="has-text-centered">
+          <img src="./static/images/layer_attention.png"
+               alt="token-wise attention heatmap"
+               style="width: 100%; height: 200px; border: 1px solid #ddd; border-radius: 8px;">
+                      <p class="is-size-7 has-text-grey" style="margin-top: 10px;">
+                Figure 2: Token-wise attention heatmap on Layer-32 and Layer-15 of LLaVA-1.5
+            </p>
+              </div>
+      </div>
+    </div>
 
     <div class="columns is-vcentered" style="margin-top: 30px;">
       <div class="column is-half">
@@ -194,7 +204,7 @@
                  alt="dog to image token attention heatmap"
                  style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
             <p class="is-size-7 has-text-grey" style="margin-top: 10px;">
-                Left: Visualization showing OL-VAR scores peaking in middle layers and highest at Layer-15, which is aligned with our obeservation of the token-wise attention heatmap pattern in Figure 2. Right: Utilizing the layer-15 attention, we can effective bounding the corresponding image region of "dog". 
+                Figure3: Left: Visualization showing OL-VAR scores peaking in middle layers and highest at Layer-15, which is aligned with our obeservation of the token-wise attention heatmap pattern in Figure 2. Right: Utilizing the layer-15 attention, we can effective bounding the corresponding image region of "dog". 
             </p>
         </div>
       </div>
