@@ -3,30 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Hallucinatory Image Tokens: A Training-f    <!-- Caption -->
-    <div class="columns is-centered has-text-centered" style="margin-top: -20px;">
-      <div class="column is-full" style="max-width: 100%; padding: 0 10%;">
-        <p style="font-size: 0.9rem; margin-top: 10px; font-style: italic; color: #666;">
-          Figure 1: Removing three image tokens results in the elimination of the hallucinated objects, "apples" and "oranges", and reveals the real
-object "kiwis".
-        </p>
-      </div>
-    </div>
-    
-    <!-- Brief intro of EAZY -->
-    <div class="columns is-centered has-text-justified" style="margin-top: 20px;">
-      <div class="column is-full" style="max-width: 100%; padding: 0 10%;">
-        <p style="text-align: justify; font-size: 1rem; line-height: 1.5; margin: 0;">
-          EAZY identifies and removes hallucinatory image tokens from the input image, effectively mitigating hallucinations in LVLMs. The method is training-free and can be applied to various LVLM architectures. In this example, EAZY removes three image tokens, which eliminates the hallucinated objects, "apples" and "oranges", revealing the real object "kiwis".
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section> on Detecting and Mitigating Object Hallucinations in LVLMs">
+        content="Hallucinatory Image Tokens: A Training-free EAZY Approach on Detecting and Mitigating Object Hallucinations in LVLMs">
   <meta name="keywords" content="Hallucination Detection and Mitigation in LVLMs">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hallucinatory Image Tokens: A Training-free EAZY Approach on Detecting and Mitigating Object Hallucinations in LVLMs</title>
+  <title><span style="background: linear-gradient(to right, #ff7e5f, #feb47b); -webkit-background-clip: text; background-clip: text; color: transparent; filter: blur(1px);">Hallucinatory Image Tokens</span>: A Training-free <span style="font-family: 'Castoro', serif; font-style: italic;">EAZY</span> Approach on Detecting and Mitigating Object Hallucinations in LVLMs</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -68,7 +48,7 @@ object "kiwis".
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Hallucinatory Image Tokens: A Training-free EAZY Approach on Detecting and Mitigating Object Hallucinations in LVLMs</h1>
+          <h1 class="title is-1 publication-title">Hallucinatory Image Tokens: A Training-free <span style="font-family: 'Castoro', serif; font-style: italic;">EAZY</span> Approach on Detecting and Mitigating Object Hallucinations in LVLMs</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://www.linkedin.com/in/liweiche/">Liwei Che</a><sup>1</sup>,</span>
@@ -89,6 +69,14 @@ object "kiwis".
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Rutgers University</span>
+          </div>
+
+          <div class="has-text-centered">
+            <img src="./static/images/rutgers.png" alt="Rutgers Logo" style="margin-top: 10px; width: 150px; height: auto;">
+          </div>
+
+          <div class="has-text-centered">
+            <p style="font-weight: bold; font-size: 1.5rem;">ICCV2025</p>
           </div>
 
           <div class="column has-text-centered">
@@ -155,11 +143,11 @@ object "kiwis".
 
     <div class="columns is-centered has-text-centered" style="margin-top: 20px;">
       <div class="column is-full" style="max-width: 80%; padding: 0;">
-        <p style="text-align: justify; font-size: 1rem; line-height: 1.5; margin: 0;">
-          [cite_start]EAZY identifies and removes hallucinatory image tokens from the input image, effectively mitigating hallucinations in LVLMs[cite: 19]. [cite_start]The method is training-free and can be applied to various LVLM architectures[cite: 21]. [cite_start]In this example, EAZY removes three image tokens, which eliminates the hallucinated objects, "apples" and "oranges", revealing the real object "kiwis"[cite: 62].
-        </p>
         <p style="font-size: 0.9rem; margin-top: 10px; font-style: italic; color: #666;">
-          [cite_start]Figure 1: Removing three image tokens results in the elimination of the hallucinated objects, ”apples” and ”oranges”, and reveals the real object ”kiwis”[cite: 62].
+          Figure 1: Removing three image tokens results in the elimination of the hallucinated objects, "apples" and "oranges", and reveals the real object "kiwis".
+        </p>
+        <p style="text-align: justify; font-size: 1rem; line-height: 1.5; margin: 0;">
+          EAZY identifies and removes hallucinatory image tokens from the input image, effectively mitigating hallucinations in LVLMs. The method is training-free and can be applied to various LVLM architectures. In this example, EAZY removes three image tokens, which eliminates the hallucinated objects, "apples" and "oranges", revealing the real object "kiwis".
         </p>
       </div>
     </div>
@@ -184,7 +172,7 @@ object "kiwis".
         <h3 class="title is-4">1. Locating Object Information in Model Layers</h3>
         <div class="content has-text-justified">
           <p>
-            [cite_start]Through a comprehensive analysis of attention patterns, we found that Large Vision-Language Models (LVLMs) primarily extract and process object-related information in their middle-to-late layers, not in the initial or final layers as one might expect[cite: 64, 85]. [cite_start]We introduced a new metric, the Object Localization Visual Attention Ratio (OL-VAR), to quantify this[cite: 148, 149]. [cite_start]The results show that for a model like LLaVA-1.5, layers 10 through 25 are critical for linking generated object tokens to their corresponding regions in the image[cite: 151]. [cite_start]This discovery provides a precise tool to understand where the model "looks" when generating text about objects[cite: 66].
+            Through a comprehensive analysis of attention patterns, we found that Large Vision-Language Models (LVLMs) primarily extract and process object-related information in their middle-to-late layers, not in the initial or final layers as one might expect. We introduced a new metric, the Object Localization Visual Attention Ratio (OL-VAR), to quantify this. The results show that for a model like LLaVA-1.5, layers 10 through 25 are critical for linking generated object tokens to their corresponding regions in the image. This discovery provides a precise tool to understand where the model "looks" when generating text about objects.
           </p>
         </div>
       </div>
@@ -215,7 +203,7 @@ object "kiwis".
         <h3 class="title is-4">2. Hallucinatory Image Tokens (HITs)</h3>
         <div class="content has-text-justified">
           <p>
-            [cite_start]Our main discovery is that a small, specific subset of image tokens, which we term Hallucinatory Image Tokens (HITs), are the primary drivers of object hallucination[cite: 17, 73, 194]. [cite_start]These tokens receive high attention scores from the hallucinated object words during generation[cite: 17]. [cite_start]Astonishingly, by simply "zeroing out" a tiny fraction of these HITs (e.g., only 1.5% of all image tokens), we can effectively eliminate the hallucinated object from the model's response[cite: 18, 88]. [cite_start]Crucially, this operation has minimal impact on real objects, which remain robustly identified[cite: 76, 91, 217]. This distinct behavior provides a powerful, training-free method to both detect and mitigate hallucinations.
+            Our main discovery is that a small, specific subset of image tokens, which we term Hallucinatory Image Tokens (HITs), are the primary drivers of object hallucination. These tokens receive high attention scores from the hallucinated object words during generation. Astonishingly, by simply "zeroing out" a tiny fraction of these HITs (e.g., only 1.5% of all image tokens), we can effectively eliminate the hallucinated object from the model's response. Crucially, this operation has minimal impact on real objects, which remain robustly identified. This distinct behavior provides a powerful, training-free method to both detect and mitigate hallucinations.
           </p>
         </div>
       </div>
@@ -237,7 +225,6 @@ object "kiwis".
 
 
 
-
 <section class="section" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
   <div class="container is-max-desktop" style="width: 100%;">
     <h2 class="title is-3" style="margin-top: 40px;">Methodology</h2>
@@ -247,10 +234,10 @@ object "kiwis".
         <h3 class="title is-4">Hallucination Detection</h3>
         <div class="content has-text-justified">
           <p>
-            The EAZY method identifies object hallucinations by leveraging the insight that real and hallucinated objects respond differently to the removal of high-attention image tokens. The process begins by generating an initial response from the LVLM for a given image. [cite_start]From this response, potential object tokens are extracted using NLP techniques like POS tagging[cite: 232, 247]. [cite_start]For each identified object token, the method pinpoints the top-K image tokens that received the highest attention scores from it[cite: 248, 249, 250]. [cite_start]These top-K tokens are considered candidate Hallucinatory Image Tokens (HITs)[cite: 229].
+            The EAZY method identifies object hallucinations by leveraging the insight that real and hallucinated objects respond differently to the removal of high-attention image tokens. The process begins by generating an initial response from the LVLM for a given image. From this response, potential object tokens are extracted using NLP techniques like POS tagging. For each identified object token, the method pinpoints the top-K image tokens that received the highest attention scores from it. These top-K tokens are considered candidate Hallucinatory Image Tokens (HITs).
           </p>
           <p>
-            [cite_start]Next, the model's input is modified by "zeroing out" these candidate HITs, replacing their embeddings with zero vectors[cite: 251, 252]. [cite_start]A new response is then generated using this modified input[cite: 255]. If an object token from the original response disappears in the new response, EAZY classifies it as a hallucination. [cite_start]Conversely, if the object token remains, it is classified as a real object[cite: 255]. [cite_start]This differential behavior serves as a robust, training-free mechanism for detecting hallucinations, showing that real objects are largely unaffected by this zeroing-out process, while hallucinated ones are effectively eliminated[cite: 229].
+            Next, the model's input is modified by "zeroing out" these candidate HITs, replacing their embeddings with zero vectors. A new response is then generated using this modified input. If an object token from the original response disappears in the new response, EAZY classifies it as a hallucination. Conversely, if the object token remains, it is classified as a real object. This differential behavior serves as a robust, training-free mechanism for detecting hallucinations, showing that real objects are largely unaffected by this zeroing-out process, while hallucinated ones are effectively eliminated.
           </p>
         </div>
       </div>
@@ -261,10 +248,10 @@ object "kiwis".
         <h3 class="title is-4">Hallucination Mitigation</h3>
         <div class="content has-text-justified">
           <p>
-            [cite_start]The mitigation process in EAZY follows a similar logic to detection and is designed to correct the initial, potentially flawed output of an LVLM[cite: 257]. [cite_start]First, an initial inference is performed to get the model's description of the image[cite: 257]. [cite_start]All object tokens, both real and hallucinated, are extracted from this initial response[cite: 258]. [cite_start]For all identified objects, the method aggregates the top-K candidate HITs into a single set[cite: 259, 283].
+            The mitigation process in EAZY follows a similar logic to detection and is designed to correct the initial, potentially flawed output of an LVLM. First, an initial inference is performed to get the model's description of the image. All object tokens, both real and hallucinated, are extracted from this initial response. For all identified objects, the method aggregates the top-K candidate HITs into a single set.
           </p>
           <p>
-            [cite_start]These aggregated candidate HITs are then zeroed out from the image token sequence to perform a second, "estimation" inference[cite: 260]. [cite_start]By comparing the initial response with the second one, EAZY identifies the objects that disappeared, flagging them as hallucinations[cite: 281]. [cite_start]Finally, the candidate HITs corresponding only to these confirmed hallucinated objects are collected to form a final zero-out list[cite: 282, 283]. [cite_start]This final set of tokens is zeroed out from the original input, and a final inference is run to produce a corrected, mitigated response that is free of the identified hallucinations while preserving the accurately described objects[cite: 290].
+            These aggregated candidate HITs are then zeroed out from the image token sequence to perform a second, "estimation" inference. By comparing the initial response with the second one, EAZY identifies the objects that disappeared, flagging them as hallucinations. Finally, the candidate HITs corresponding only to these confirmed hallucinated objects are collected to form a final zero-out list. This final set of tokens is zeroed out from the original input, and a final inference is run to produce a corrected, mitigated response that is free of the identified hallucinations while preserving the accurately described objects.
           </p>
         </div>
       </div>
@@ -278,7 +265,7 @@ object "kiwis".
       </div>
     </div>
 
-    <div class="columns is-centered has-text-centered" style="margin-top: 10px;">
+    <div class="columns is-centered has-text-left" style="margin-top: 10px;">
       <div class="column is-full" style="max-width: 100%; padding: 0 10%;">
         <p style="font-size: 0.9rem; margin-top: 10px; font-style: italic; color: #666;">
           Figure 6: Overview of the proposed EAZY method. The process starts with an image input encoded into image tokens. The LVLM generates an initial response with hallucinated objects (apples, oranges). EAZY estimates HITs via text-to-image token-wise attention distribution. With HITs zeroed out, the final response has the hallucinations disappeared, revealing correct objects (kiwis).
