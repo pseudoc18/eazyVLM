@@ -141,7 +141,7 @@
       </div>
     </div>
 
-    <div class="columns is-left has-text-centered" style="margin-top: 20px;">
+    <div class="columns is-vcentered has-text-centered" style="margin-top: 20px;">
       <div class="column is-full" style="max-width: 80%; padding: 0;">
         <p style="font-size: 0.9rem; margin-top: 10px; font-style: italic; color: #666;">
           Figure 1: Removing three image tokens results in the elimination of the hallucinated objects, "apples" and "oranges", and reveals the real object "kiwis".
@@ -227,6 +227,61 @@
       </p>
     </div>
   </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Hallucinatory Image Tokens</h2>
+    <div class="content has-text-justified">
+      <p>
+        We explore the root causes of object hallucination (OH) from a visual perspective. 
+        Building on our previous findings that attention in middle layers aligns object tokens with their visual anchors, 
+        we investigate whether a small subset of image tokens plays a decisive role in hallucinated object generation.
+      </p>
+
+      <p>
+        Through case studies and systematic analysis, we identify that hallucinated objects consistently attend to a few image tokens 
+        with the highest attention scores, which we term <strong>Hallucinatory Image Tokens (HITs)</strong>. 
+        Remarkably, we find that zeroing out as few as three of these HITs can eliminate hallucinated objects from the generated text, 
+        without affecting real object descriptions.
+      </p>
+      <p>
+        To further validate the semantic interpretation of HITs, we apply the Logit Lens technique and confirm that these tokens 
+        are indeed decoded as hallucinated object labels (e.g., "apple", "orange"). 
+        This reveals that hallucinations are not random artifacts but stem from biased visual evidence in the input image encoding.
+      </p>
+        <!-- logit lens -->
+      <div class="has-text-centered" style="margin-bottom: 2em;">
+        <img src="static/images/logit_lens.png" alt="Case Study: Fruit Stand" style="width: 80%; height: auto;">
+        <p class="is-size-7 has-text-grey" style="margin-top: 10px;">
+          Figure 5: Logit Lens interpretation of HITs. We display the top-5 projected words of image tokens related to HOs. The HITs are interpreted as the hallucinatory objects, ”apple” and ”orange”.
+        </p>
+      </div>
+
+      <p>
+        We then quantify the hallucination mitigation performance by evaluating how zeroing out the top-K HITs affects real and hallucinated objects.
+        Our experiments on the curated Hall-COCO dataset show that hallucinated objects are highly sensitive to HIT removal, 
+        whereas real objects remain robust, thus confirming the discriminative power of our method.
+      </p>
+    </div>
+
+    <!-- Image Placeholder 2 -->
+    <div class="has-text-centered" style="margin-bottom: 2em;">
+      <img src="static/images/verify.png" alt="Hallucination Mitigation Statistics" style="width: 80%; height: auto;">
+      <p class="is-size-7 has-text-grey" style="margin-top: 10px;">
+        Figure 6: Reduction ratio of OHs in Hall-COCO after zeroing out HITs. We show the ratio changes of image w/o improv.(ratio of images with the same HOs after zeroing out), image w OH (images with OH in the response), and HO (Ratio of HOs in all text responses).
+      </p>
+    </div>
+
+    <!-- Image Placeholder 3 -->
+    <div class="has-text-centered">
+      <img src="static/images/obj_removal_k.png" alt="Object Removal Rate by Zeroing Out" style="width: 80%; height: auto;">
+      <p class="is-size-7 has-text-grey" style="margin-top: 10px;">
+        Figure 7: Hallucinated object removal rate significantly increases after zeroing out top-K HITs, with minimal impact on real objects.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -391,7 +446,7 @@
         We present qualitative case studies demonstrating EAZY's effectiveness in detecting and mitigating object hallucinations across diverse scenarios. These examples showcase how our method identifies problematic image tokens and successfully eliminates hallucinated objects while preserving the accuracy of real object detection.
       </p>
       
-          <div id="results-carousel" class="carousel results-carousel" style="width: 100%;">
+          <div id="results-carousel" class="carousel results-carousel" style="width: auto;">
             <div class="item" style="text-align: center;">
               <img src="static/images/cat_case.png" alt="Cat Case Study" style="width: 80%; height: auto;">
             </div>
