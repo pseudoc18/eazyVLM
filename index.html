@@ -376,39 +376,28 @@
       <p>
         We present qualitative case studies demonstrating EAZY's effectiveness in detecting and mitigating object hallucinations across diverse scenarios. These examples showcase how our method identifies problematic image tokens and successfully eliminates hallucinated objects while preserving the accuracy of real object detection.
       </p>
-    </div>
-
-    <div style="margin-top: 30px;">
-      
-      <div class="columns is-centered" style="margin-top: 20px;">
-        <div class="column is-three-quarters">
-          <div class="has-text-centered">
-            <img src="./static/images/airport_case.png"
-                 alt="Airport Case Study"
-                 style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
-            <p class="has-text-weight-semibold" style="margin-top: 15px;">Airport Scene</p>
-            <p class="is-size-7 has-text-grey">
-              EAZY successfully identifies and removes hallucinated objects in complex airport scenes, demonstrating its effectiveness in real-world environments with multiple objects and intricate backgrounds.
-            </p>
+      </div>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <img src="static/images/cat_case.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <img src="static/images/airport_case.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <img src="static/images/snow_case.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <img src="static/images/night_case.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <img src="static/images/street_case.png" alt="MY ALT TEXT" />
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="columns is-centered" style="margin-top: 30px;">
-        <div class="column is-three-quarters">
-          <div class="has-text-centered">
-            <img src="./static/images/cat_case.png"
-                 alt="Cat Case Study"
-                 style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
-            <p class="has-text-weight-semibold" style="margin-top: 15px;">Four Cats Lying on the Table</p>
-            <p class="is-size-7 has-text-grey">
-              In this cat-focused scenario, by removing just one hallucinatory image token, the EAZY output eliminated the hallucinated "glove" and correct the numbers of cats as well as other objects on the table.
-            </p>
-          </div>
-        </div>
-      </div>
 
     </div>
+
 
     <div class="content has-text-justified" style="margin-top: 40px;">
       <h3 class="title is-4">Case Study Insights</h3>
