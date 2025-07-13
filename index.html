@@ -273,7 +273,7 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title">Experiments</h2>
+    <h2 class="title">Evaluation</h2>
     <div class="content has-text-justified">
       <p>
         We conduct extensive experiments to evaluate the effectiveness of EAZY in detecting and mitigating object hallucinations across various LVLMs and datasets. Our results demonstrate that EAZY significantly outperforms existing methods in both detection accuracy and mitigation effectiveness, while maintaining model utility.
@@ -311,16 +311,29 @@
         </div>
       </div>
 
+      <div class="columns is-centered" style="margin-top: 30px;">
+        <div class="column is-two-thirds">
+            <div class="has-text-centered">
+              <img src="./static/images/detection_curve.png"
+                   alt="POPE Results"
+                   style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+              <p class="has-text-weight-semibold" style="margin-top: 15px;">Hallucination Detection Curves Comparison</p>
+              <p class="is-size-7 has-text-grey">
+                Object Hallucination Detection Curves on Hall-COCO. We present the Precision-Recall and ROC curves of the proposed OH detection method and baselines.
+              </p>
+            </div>
+        </div>
+      </div>
 
       <div class="columns is-centered" style="margin-top: 30px;">
         <div class="column is-two-thirds">
             <div class="has-text-centered">
               <img src="./static/images/detection_exp.png"
                    alt="Detection Performance"
-                   style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+                   style="width: 60%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
               <p class="has-text-weight-semibold" style="margin-top: 15px;">Detection Performance</p>
               <p class="is-size-7 has-text-grey">
-                EAZY achieves superior detection accuracy across multiple LVLM architectures, consistently outperforming baseline methods.
+                OH Detection Results on Hall-COCO. PR(RO) represents the precision of real objects (positive instances), while PR(OH) represents the precision of object hallucination (negative instances).
               </p>
             </div>
         </div>
