@@ -2,14 +2,13 @@ Page in https://pseudoc18.github.io/eazyVLM/
 
 If you find our work useful, please cite:
 ```
-@misc{che2025hallucinatoryimagetokenstrainingfree,
-      title={Hallucinatory Image Tokens: A Training-free EAZY Approach on Detecting and Mitigating Object Hallucinations in LVLMs}, 
-      author={Liwei Che and Tony Qingze Liu and Jing Jia and Weiyi Qin and Ruixiang Tang and Vladimir Pavlovic},
-      year={2025},
-      eprint={2503.07772},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2503.07772}, 
+@InProceedings{Che_2025_ICCV,
+    author    = {Che, Liwei and Liu, Tony Qingze and Jia, Jing and Qin, Weiyi and Tang, Ruixiang and Pavlovic, Vladimir},
+    title     = {Hallucinatory Image Tokens: A Training-free EAZY Approach to Detecting and Mitigating Object Hallucinations in LVLMs},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2025},
+    pages     = {21635-21644}
 }
 ```
 
